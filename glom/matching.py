@@ -795,19 +795,19 @@ class Switch(object):
        - Target: 3
        - Spec: Match(Switch([(Or('a', 'e', 'i', 'o', 'u'), Val('vowel')), (And(str, M, (M(T[2:]) == '')), Val('...
        + Spec: Switch([(Or('a', 'e', 'i', 'o', 'u'), Val('vowel')), (And(str, M, (M(T[2:]) == '')), Val('conson...
-       |\ Spec: Or('a', 'e', 'i', 'o', 'u')
-       ||\ Spec: 'a'
+       |. Spec: Or('a', 'e', 'i', 'o', 'u')
+       ||. Spec: 'a'
        ||X glom.matching.MatchError: 3 does not match 'a'
-       ||\ Spec: 'e'
+       ||. Spec: 'e'
        ||X glom.matching.MatchError: 3 does not match 'e'
-       ||\ Spec: 'i'
+       ||. Spec: 'i'
        ||X glom.matching.MatchError: 3 does not match 'i'
-       ||\ Spec: 'o'
+       ||. Spec: 'o'
        ||X glom.matching.MatchError: 3 does not match 'o'
-       ||\ Spec: 'u'
+       ||. Spec: 'u'
        ||X glom.matching.MatchError: 3 does not match 'u'
        |X glom.matching.MatchError: 3 does not match 'u'
-       |\ Spec: And(str, M, (M(T[2:]) == ''))
+       |. Spec: And(str, M, (M(T[2:]) == ''))
        || Spec: str
        |X glom.matching.TypeMatchError: expected type str, not int
       glom.matching.MatchError: no matches for target in Switch
